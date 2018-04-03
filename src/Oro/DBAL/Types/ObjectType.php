@@ -1,6 +1,6 @@
 <?php
 
-namespace Oro\DBAL\Types;
+namespace Odinsey\DBAL\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\ObjectType as BaseType;

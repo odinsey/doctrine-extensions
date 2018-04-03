@@ -20,9 +20,9 @@
     </php>
 
     <testsuites>
-        <testsuite name="Oro Doctrine Extensions Test Suite">
-            <directory>../Oro/Tests/ORM</directory>
-            <directory>../Oro/Tests/DBAL</directory>
+        <testsuite name="Odinsey Doctrine Extensions Test Suite">
+            <directory>../Odinsey/Tests/ORM</directory>
+            <directory>../Odinsey/Tests/DBAL</directory>
         </testsuite>
     </testsuites>
 </phpunit>

@@ -1,10 +1,10 @@
 <?php
 
-namespace Oro\ORM\Query\AST;
+namespace Odinsey\ORM\Query\AST;
 
 use Doctrine\ORM\Query\QueryException;
 use Doctrine\Common\Inflector\Inflector;
-use Oro\ORM\Query\AST\Platform\Functions\PlatformFunctionNode;
+use Odinsey\ORM\Query\AST\Platform\Functions\PlatformFunctionNode;
 
 class FunctionFactory
 {

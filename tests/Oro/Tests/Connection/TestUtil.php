@@ -1,6 +1,6 @@
 <?php
 
-namespace Oro\Tests\Connection;
+namespace Odinsey\Tests\Connection;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Setup;

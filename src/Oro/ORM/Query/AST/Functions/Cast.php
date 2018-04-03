@@ -1,6 +1,6 @@
 <?php
 
-namespace Oro\ORM\Query\AST\Functions;
+namespace Odinsey\ORM\Query\AST\Functions;
 
 use Doctrine\ORM\Query\AST\Literal;
 use Doctrine\ORM\Query\Parser;

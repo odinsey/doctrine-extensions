@@ -1,9 +1,9 @@
 <?php
 
-namespace Oro\Tests\DBAL\Types;
+namespace Odinsey\Tests\DBAL\Types;
 
 use Doctrine\DBAL\Types\Type;
-use Oro\Tests\Connection\TestUtil;
+use Odinsey\Tests\Connection\TestUtil;
 
 class ArrayTypeTest extends \PHPUnit_Framework_TestCase
 {
@@ -43,7 +43,7 @@ class ArrayTypeTest extends \PHPUnit_Framework_TestCase
      */
     protected function getType()
     {
-        Type::overrideType(Type::TARRAY, 'Oro\DBAL\Types\ArrayType');
+        Type::overrideType(Type::TARRAY, 'Odinsey\DBAL\Types\ArrayType');
         return Type::getType(Type::TARRAY);
     }
 

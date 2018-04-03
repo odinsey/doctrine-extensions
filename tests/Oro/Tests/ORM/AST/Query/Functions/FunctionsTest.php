@@ -1,14 +1,14 @@
 <?php
 
-namespace Oro\Tests\ORM\AST\Query\Functions;
+namespace Odinsey\Tests\ORM\AST\Query\Functions;
 
 use Doctrine\ORM\Configuration;
 use Doctrine\ORM\Query;
 
 use Symfony\Component\Yaml\Yaml;
 
-use Oro\Tests\Connection\TestUtil;
-use Oro\Tests\TestCase;
+use Odinsey\Tests\Connection\TestUtil;
+use Odinsey\Tests\TestCase;
 
 class FunctionsTest extends TestCase
 {

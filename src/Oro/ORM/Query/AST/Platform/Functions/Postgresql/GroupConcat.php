@@ -1,11 +1,11 @@
 <?php
 
-namespace Oro\ORM\Query\AST\Platform\Functions\Postgresql;
+namespace Odinsey\ORM\Query\AST\Platform\Functions\Postgresql;
 
 use Doctrine\ORM\Query\AST\Node;
-use Oro\ORM\Query\AST\Functions\String\GroupConcat as Base;
+use Odinsey\ORM\Query\AST\Functions\String\GroupConcat as Base;
 use Doctrine\ORM\Query\SqlWalker;
-use Oro\ORM\Query\AST\Platform\Functions\PlatformFunctionNode;
+use Odinsey\ORM\Query\AST\Platform\Functions\PlatformFunctionNode;
 
 class GroupConcat extends PlatformFunctionNode
 {

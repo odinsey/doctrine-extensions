@@ -6,10 +6,10 @@
  * Time: 10.44.PD
  */
 
-namespace Oro\ORM\Query\AST\Platform\Functions\Postgresql;
+namespace Odinsey\ORM\Query\AST\Platform\Functions\Postgresql;
 
-use Oro\ORM\Query\AST\Functions\Numeric\Round as BaseRound;
-use Oro\ORM\Query\AST\Platform\Functions\PlatformFunctionNode;
+use Odinsey\ORM\Query\AST\Functions\Numeric\Round as BaseRound;
+use Odinsey\ORM\Query\AST\Platform\Functions\PlatformFunctionNode;
 use Doctrine\ORM\Query\SqlWalker;
 
 class Round extends PlatformFunctionNode

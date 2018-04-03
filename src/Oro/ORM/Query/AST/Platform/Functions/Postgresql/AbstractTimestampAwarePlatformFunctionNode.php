@@ -1,13 +1,13 @@
 <?php
 
-namespace Oro\ORM\Query\AST\Platform\Functions\Postgresql;
+namespace Odinsey\ORM\Query\AST\Platform\Functions\Postgresql;
 
 use Doctrine\ORM\Query\AST\Literal;
 use Doctrine\ORM\Query\AST\Node;
 use Doctrine\ORM\Query\SqlWalker;
 
-use Oro\ORM\Query\AST\Functions\SimpleFunction;
-use Oro\ORM\Query\AST\Platform\Functions\PlatformFunctionNode;
+use Odinsey\ORM\Query\AST\Functions\SimpleFunction;
+use Odinsey\ORM\Query\AST\Platform\Functions\PlatformFunctionNode;
 
 abstract class AbstractTimestampAwarePlatformFunctionNode extends PlatformFunctionNode
 {

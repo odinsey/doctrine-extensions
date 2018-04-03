@@ -6,10 +6,10 @@
  * Time: 10.44.PD
  */
 
-namespace Oro\ORM\Query\AST\Platform\Functions\Mysql;
+namespace Odinsey\ORM\Query\AST\Platform\Functions\Mysql;
 
-use Oro\ORM\Query\AST\Functions\Numeric\Round as BaseRound;
-use Oro\ORM\Query\AST\Platform\Functions\PlatformFunctionNode;
+use Odinsey\ORM\Query\AST\Functions\Numeric\Round as BaseRound;
+use Odinsey\ORM\Query\AST\Platform\Functions\PlatformFunctionNode;
 use Doctrine\ORM\Query\SqlWalker;
 
 class Round extends PlatformFunctionNode

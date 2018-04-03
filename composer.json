@@ -1,14 +1,13 @@
 {
-    "name": "oro/doctrine-extensions",
+    "name": "odinsey/doctrine-extensions",
     "type": "library",
     "description": "Doctrine Extensions for MySQL and PostgreSQL.",
-    "homepage": "https://github.com/orocrm/doctrine-extensions/",
+    "homepage": "https://github.com/odinsey/doctrine-extensions/",
     "keywords": ["database", "mysql", "postgresql", "dql", "function", "doctrine", "type"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Oro, Inc",
-            "homepage": "http://www.orocrm.com"
+            "name": "Odinsey, Inc",
         }
     ],
     "require": {
@@ -24,8 +23,8 @@
     },
     "autoload": {
         "psr-0": {
-            "Oro\\DBAL": "src/",
-            "Oro\\ORM": "src/"
+            "Odinsey\\DBAL": "src/",
+            "Odinsey\\ORM": "src/"
         }
     },
     "prefer-stable": true,

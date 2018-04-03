@@ -1,9 +1,9 @@
 <?php
 
-namespace Oro\ORM\Query\AST\Platform\Functions\Postgresql;
+namespace Odinsey\ORM\Query\AST\Platform\Functions\Postgresql;
 
-use Oro\ORM\Query\AST\Functions\String\Replace as Base;
-use Oro\ORM\Query\AST\Platform\Functions\PlatformFunctionNode;
+use Odinsey\ORM\Query\AST\Functions\String\Replace as Base;
+use Odinsey\ORM\Query\AST\Platform\Functions\PlatformFunctionNode;
 use Doctrine\ORM\Query\SqlWalker;
 
 class Replace extends PlatformFunctionNode

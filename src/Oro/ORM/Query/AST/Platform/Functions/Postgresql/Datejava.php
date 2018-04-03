@@ -7,7 +7,8 @@ use Doctrine\ORM\Query\SqlWalker;
 use Odinsey\ORM\Query\AST\Functions\SimpleFunction;
 use Odinsey\ORM\Query\AST\Platform\Functions\PlatformFunctionNode;
 
-class Sign extends PlatformFunctionNode
+
+class Datejava extends PlatformFunctionNode
 {
     /**
      * {@inheritdoc}
@@ -16,6 +17,6 @@ class Sign extends PlatformFunctionNode
     {
         /** @var Node $expression */
         $expression = $this->parameters[SimpleFunction::PARAMETER_KEY];
-        return 'SIGN(' . $this->getExpressionValue($expression, $sqlWalker) . ')';
+        return 'DATEJAVA(' . $this->getExpressionValue($expression, $sqlWalker) . ')';
     }
 }

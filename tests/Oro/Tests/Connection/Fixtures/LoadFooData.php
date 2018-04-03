@@ -1,11 +1,11 @@
 <?php
 
-namespace Oro\Tests\Connection\Fixtures;
+namespace Odinsey\Tests\Connection\Fixtures;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
-use Oro\Entities\Foo;
+use Odinsey\Entities\Foo;
 
 class LoadFooData implements FixtureInterface
 {

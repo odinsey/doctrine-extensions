@@ -1,12 +1,12 @@
 <?php
 
-namespace Oro\Tests\Connection;
+namespace Odinsey\Tests\Connection;
 
 use Doctrine\Common\DataFixtures\Executor\ORMExecutor;
 use Doctrine\Common\DataFixtures\Loader;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
 use Doctrine\ORM\Tools\SchemaTool;
-use Oro\Tests\TestCase;
+use Odinsey\Tests\TestCase;
 
 class SetupTest extends TestCase
 {

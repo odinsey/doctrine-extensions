@@ -1,6 +1,6 @@
 <?php
 
-namespace Oro\ORM\Query\AST\Platform\Functions;
+namespace Odinsey\ORM\Query\AST\Platform\Functions;
 
 use Doctrine\ORM\Query\AST\Node;
 use Doctrine\ORM\Query\SqlWalker;

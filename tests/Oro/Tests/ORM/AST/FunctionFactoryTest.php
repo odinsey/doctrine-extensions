@@ -1,8 +1,8 @@
 <?php
 
-namespace Oro\Tests\ORM\AST;
+namespace Odinsey\Tests\ORM\AST;
 
-use Oro\ORM\Query\AST\FunctionFactory;
+use Odinsey\ORM\Query\AST\FunctionFactory;
 
 class FunctionFactoryTest extends \PHPUnit_Framework_TestCase
 {
@@ -23,7 +23,7 @@ class FunctionFactoryTest extends \PHPUnit_Framework_TestCase
     public function testCreate($platform, $function)
     {
         $functionInstance = FunctionFactory::create($platform, $function, array());
-        $this->assertInstanceOf('Oro\ORM\Query\AST\Platform\Functions\PlatformFunctionNode', $functionInstance);
+        $this->assertInstanceOf('Odinsey\ORM\Query\AST\Platform\Functions\PlatformFunctionNode', $functionInstance);
     }
 
     /**

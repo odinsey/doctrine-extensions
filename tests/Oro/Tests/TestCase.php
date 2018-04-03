@@ -1,9 +1,9 @@
 <?php
 
-namespace Oro\Tests;
+namespace Odinsey\Tests;
 
 use Doctrine\ORM\EntityManager;
-use Oro\Tests\Connection\TestUtil;
+use Odinsey\Tests\Connection\TestUtil;
 
 class TestCase extends \PHPUnit_Framework_TestCase
 {

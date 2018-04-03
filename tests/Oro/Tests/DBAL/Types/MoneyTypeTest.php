@@ -1,10 +1,10 @@
 <?php
 
-namespace Oro\Tests\DBAL\Types;
+namespace Odinsey\Tests\DBAL\Types;
 
 use Doctrine\DBAL\Types\Type;
-use Oro\DBAL\Types\MoneyType;
-use Oro\Tests\Connection\TestUtil;
+use Odinsey\DBAL\Types\MoneyType;
+use Odinsey\Tests\Connection\TestUtil;
 
 class MoneyTypeTest extends \PHPUnit_Framework_TestCase
 {
@@ -16,7 +16,7 @@ class MoneyTypeTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         if (!Type::hasType(MoneyType::TYPE)) {
-            Type::addType(MoneyType::TYPE, 'Oro\DBAL\Types\MoneyType');
+            Type::addType(MoneyType::TYPE, 'Odinsey\DBAL\Types\MoneyType');
         }
         $this->type = Type::getType(MoneyType::TYPE);
     }

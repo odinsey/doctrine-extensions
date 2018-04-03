@@ -1,9 +1,9 @@
 <?php
 
-namespace Oro\Tests\DBAL\Types;
+namespace Odinsey\Tests\DBAL\Types;
 
 use Doctrine\DBAL\Types\Type;
-use Oro\Tests\Connection\TestUtil;
+use Odinsey\Tests\Connection\TestUtil;
 
 class ObjectTypeTest extends \PHPUnit_Framework_TestCase
 {
@@ -43,7 +43,7 @@ class ObjectTypeTest extends \PHPUnit_Framework_TestCase
      */
     protected function getType()
     {
-        Type::overrideType(Type::OBJECT, 'Oro\DBAL\Types\ObjectType');
+        Type::overrideType(Type::OBJECT, 'Odinsey\DBAL\Types\ObjectType');
         return Type::getType(Type::OBJECT);
     }
 

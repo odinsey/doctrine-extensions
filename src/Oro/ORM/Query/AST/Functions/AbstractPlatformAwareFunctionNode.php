@@ -1,10 +1,10 @@
 <?php
 
-namespace Oro\ORM\Query\AST\Functions;
+namespace Odinsey\ORM\Query\AST\Functions;
 
 use Doctrine\ORM\Query\AST\Functions\FunctionNode;
 use Doctrine\ORM\Query\SqlWalker;
-use Oro\ORM\Query\AST\FunctionFactory;
+use Odinsey\ORM\Query\AST\FunctionFactory;
 
 abstract class AbstractPlatformAwareFunctionNode extends FunctionNode
 {

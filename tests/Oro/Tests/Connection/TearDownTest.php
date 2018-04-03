@@ -1,9 +1,9 @@
 <?php
 
-namespace Oro\Tests\Connection;
+namespace Odinsey\Tests\Connection;
 
 use Doctrine\ORM\Tools\SchemaTool;
-use Oro\Tests\TestCase;
+use Odinsey\Tests\TestCase;
 
 class TearDownTest extends TestCase
 {

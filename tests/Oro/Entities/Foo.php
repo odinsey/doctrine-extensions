@@ -1,6 +1,6 @@
 <?php
 
-namespace Oro\Entities;
+namespace Odinsey\Entities;
 
 /**
  * @Entity

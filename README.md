@@ -1,4 +1,4 @@
-Oro Doctrine Extensions
+Odinsey Doctrine Extensions
 =======================
 
 [![Build Status](https://travis-ci.org/oroinc/doctrine-extensions.svg)](https://travis-ci.org/oroinc/doctrine-extensions)
@@ -94,7 +94,7 @@ Add the following dependency to your composer.json
 ```json
 {
     "require": {
-        "oro/doctrine-extensions": "dev-master"
+        "odinsey/doctrine-extensions": "dev-master"
     }
 }
 ```
@@ -108,9 +108,9 @@ Functions Registration
 ```php
 <?php
 $config = new \Doctrine\ORM\Configuration();
-$config->addCustomStringFunction('group_concat', 'Oro\ORM\Query\AST\Functions\String\GroupConcat');
-$config->addCustomNumericFunction('hour', 'Oro\ORM\Query\AST\Functions\SimpleFunction');
-$config->addCustomDatetimeFunction('date', 'Oro\ORM\Query\AST\Functions\SimpleFunction');
+$config->addCustomStringFunction('group_concat', 'Odinsey\ORM\Query\AST\Functions\String\GroupConcat');
+$config->addCustomNumericFunction('hour', 'Odinsey\ORM\Query\AST\Functions\SimpleFunction');
+$config->addCustomDatetimeFunction('date', 'Odinsey\ORM\Query\AST\Functions\SimpleFunction');
 
 $em = EntityManager::create($dbParams, $config);
 ```
@@ -124,33 +124,33 @@ doctrine:
     orm:
         dql:
             datetime_functions:
-                date:           Oro\ORM\Query\AST\Functions\SimpleFunction
-                time:           Oro\ORM\Query\AST\Functions\SimpleFunction
-                timestamp:      Oro\ORM\Query\AST\Functions\SimpleFunction
-                convert_tz:     Oro\ORM\Query\AST\Functions\DateTime\ConvertTz
+                date:           Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                time:           Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                timestamp:      Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                convert_tz:     Odinsey\ORM\Query\AST\Functions\DateTime\ConvertTz
             numeric_functions:
-                timestampdiff:  Oro\ORM\Query\AST\Functions\Numeric\TimestampDiff
-                dayofyear:      Oro\ORM\Query\AST\Functions\SimpleFunction
-                dayofmonth:     Oro\ORM\Query\AST\Functions\SimpleFunction
-                dayofweek:      Oro\ORM\Query\AST\Functions\SimpleFunction
-                week:           Oro\ORM\Query\AST\Functions\SimpleFunction
-                day:            Oro\ORM\Query\AST\Functions\SimpleFunction
-                hour:           Oro\ORM\Query\AST\Functions\SimpleFunction
-                minute:         Oro\ORM\Query\AST\Functions\SimpleFunction
-                month:          Oro\ORM\Query\AST\Functions\SimpleFunction
-                quarter:        Oro\ORM\Query\AST\Functions\SimpleFunction
-                second:         Oro\ORM\Query\AST\Functions\SimpleFunction
-                year:           Oro\ORM\Query\AST\Functions\SimpleFunction
-                sign:           Oro\ORM\Query\AST\Functions\Numeric\Sign
-                pow:            Oro\ORM\Query\AST\Functions\Numeric\Pow
-                round:          Oro\ORM\Query\AST\Functions\Numeric\Round
+                timestampdiff:  Odinsey\ORM\Query\AST\Functions\Numeric\TimestampDiff
+                dayofyear:      Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                dayofmonth:     Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                dayofweek:      Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                week:           Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                day:            Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                hour:           Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                minute:         Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                month:          Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                quarter:        Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                second:         Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                year:           Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                sign:           Odinsey\ORM\Query\AST\Functions\Numeric\Sign
+                pow:            Odinsey\ORM\Query\AST\Functions\Numeric\Pow
+                round:          Odinsey\ORM\Query\AST\Functions\Numeric\Round
             string_functions:
-                md5:            Oro\ORM\Query\AST\Functions\SimpleFunction
-                group_concat:   Oro\ORM\Query\AST\Functions\String\GroupConcat
-                concat_ws:      Oro\ORM\Query\AST\Functions\String\ConcatWs
-                cast:           Oro\ORM\Query\AST\Functions\Cast
-                replace:        Oro\ORM\Query\AST\Functions\String\Replace
-                date_format:    Oro\ORM\Query\AST\Functions\String\DateFormat
+                md5:            Odinsey\ORM\Query\AST\Functions\SimpleFunction
+                group_concat:   Odinsey\ORM\Query\AST\Functions\String\GroupConcat
+                concat_ws:      Odinsey\ORM\Query\AST\Functions\String\ConcatWs
+                cast:           Odinsey\ORM\Query\AST\Functions\Cast
+                replace:        Odinsey\ORM\Query\AST\Functions\String\Replace
+                date_format:    Odinsey\ORM\Query\AST\Functions\String\DateFormat
 ```
 
 ### Silex
@@ -163,8 +163,8 @@ for [palmasev/DoctrineORMServiceProvider](https://github.com/palmasev/DoctrineOR
 
     $config = $app['doctrine_orm.configuration'];
 
-    $config->addCustomDateTimeFunction( 'year', 'Oro\ORM\Query\AST\Functions\SimpleFunction' );
-    $config->addCustomDateTimeFunction( 'month', 'Oro\ORM\Query\AST\Functions\SimpleFunction' );
+    $config->addCustomDateTimeFunction( 'year', 'Odinsey\ORM\Query\AST\Functions\SimpleFunction' );
+    $config->addCustomDateTimeFunction( 'month', 'Odinsey\ORM\Query\AST\Functions\SimpleFunction' );
 ```
 
 for [dflydev/dflydev-doctrine-orm-service-provider](https://github.com/dflydev/dflydev-doctrine-orm-service-provider)
@@ -174,34 +174,34 @@ for [dflydev/dflydev-doctrine-orm-service-provider](https://github.com/dflydev/d
     $app->register( new Dflydev\Silex\Provider\DoctrineOrm\DoctrineOrmServiceProvider, [
         ...
         'orm.custom.functions.string' => [
-            'md5'           => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-            'cast'          => 'Oro\ORM\Query\AST\Functions\Cast',
-            'group_concat'  => 'Oro\ORM\Query\AST\Functions\String\GroupConcat',
-            'concat_ws'     => 'Oro\ORM\Query\AST\Functions\String\ConcatWs',
-            'replace'       => 'Oro\ORM\Query\AST\Functions\String\Replace',
-            'date_format'   => 'Oro\ORM\Query\AST\Functions\String\DateFormat'
+            'md5'           => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+            'cast'          => 'Odinsey\ORM\Query\AST\Functions\Cast',
+            'group_concat'  => 'Odinsey\ORM\Query\AST\Functions\String\GroupConcat',
+            'concat_ws'     => 'Odinsey\ORM\Query\AST\Functions\String\ConcatWs',
+            'replace'       => 'Odinsey\ORM\Query\AST\Functions\String\Replace',
+            'date_format'   => 'Odinsey\ORM\Query\AST\Functions\String\DateFormat'
         ],
         'orm.custom.functions.datetime' => [
-            'date'          => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-            'time'          => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-            'timestamp'     => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-            'convert_tz'    => 'Oro\ORM\Query\AST\Functions\DateTime\ConvertTz'
+            'date'          => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+            'time'          => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+            'timestamp'     => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+            'convert_tz'    => 'Odinsey\ORM\Query\AST\Functions\DateTime\ConvertTz'
         ],
         'orm.custom.functions.numeric' => [
-            'timestampdiff' => 'Oro\ORM\Query\AST\Functions\Numeric\TimestampDiff',
-            'dayofyear'     => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-            'dayofweek'     => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-            'week'          => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-            'day'           => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-            'hour'          => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-            'minute'        => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-            'month'         => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-            'quarter'       => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-            'second'        => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-            'year'          => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-            'sign'          => 'Oro\ORM\Query\AST\Functions\Numeric\Sign',
-            'pow'           => 'Oro\ORM\Query\AST\Functions\Numeric\Pow',
-            'round'         => 'Oro\ORM\Query\AST\Functions\Numeric\Round',
+            'timestampdiff' => 'Odinsey\ORM\Query\AST\Functions\Numeric\TimestampDiff',
+            'dayofyear'     => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+            'dayofweek'     => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+            'week'          => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+            'day'           => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+            'hour'          => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+            'minute'        => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+            'month'         => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+            'quarter'       => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+            'second'        => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+            'year'          => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+            'sign'          => 'Odinsey\ORM\Query\AST\Functions\Numeric\Sign',
+            'pow'           => 'Odinsey\ORM\Query\AST\Functions\Numeric\Pow',
+            'round'         => 'Odinsey\ORM\Query\AST\Functions\Numeric\Round',
         ]
     ]);
 ```
@@ -215,35 +215,35 @@ return [
         'configuration' => [
             'orm_default' => [
                 'datetime_functions' => [
-                    'date'          => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'time'          => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'timestamp'     => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'convert_tz'    => 'Oro\ORM\Query\AST\Functions\DateTime\ConvertTz',
+                    'date'          => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'time'          => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'timestamp'     => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'convert_tz'    => 'Odinsey\ORM\Query\AST\Functions\DateTime\ConvertTz',
                 ],
                 'numeric_functions' => [
-                    'timestampdiff' => 'Oro\ORM\Query\AST\Functions\Numeric\TimestampDiff',
-                    'dayofyear'     => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'dayofmonth'    => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'dayofweek'     => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'week'          => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'day'           => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'hour'          => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'minute'        => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'month'         => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'quarter'       => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'second'        => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'year'          => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'sign'          => 'Oro\ORM\Query\AST\Functions\Numeric\Sign',
-                    'pow'           => 'Oro\ORM\Query\AST\Functions\Numeric\Pow',
-                    'round'         => 'Oro\ORM\Query\AST\Functions\Numeric\Round',
+                    'timestampdiff' => 'Odinsey\ORM\Query\AST\Functions\Numeric\TimestampDiff',
+                    'dayofyear'     => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'dayofmonth'    => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'dayofweek'     => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'week'          => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'day'           => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'hour'          => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'minute'        => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'month'         => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'quarter'       => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'second'        => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'year'          => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'sign'          => 'Odinsey\ORM\Query\AST\Functions\Numeric\Sign',
+                    'pow'           => 'Odinsey\ORM\Query\AST\Functions\Numeric\Pow',
+                    'round'         => 'Odinsey\ORM\Query\AST\Functions\Numeric\Round',
                 ],
                 'string_functions'  => [
-                    'md5'           => 'Oro\ORM\Query\AST\Functions\SimpleFunction',
-                    'group_concat'  => 'Oro\ORM\Query\AST\Functions\String\GroupConcat',
-                    'cast'          => 'Oro\ORM\Query\AST\Functions\Cast',
-                    'concat_ws'     => 'Oro\ORM\Query\AST\Functions\String\ConcatWs',
-                    'replace'       => 'Oro\ORM\Query\AST\Functions\String\Replace',
-                    'date_format'   => 'Oro\ORM\Query\AST\Functions\String\DateFormat'
+                    'md5'           => 'Odinsey\ORM\Query\AST\Functions\SimpleFunction',
+                    'group_concat'  => 'Odinsey\ORM\Query\AST\Functions\String\GroupConcat',
+                    'cast'          => 'Odinsey\ORM\Query\AST\Functions\Cast',
+                    'concat_ws'     => 'Odinsey\ORM\Query\AST\Functions\String\ConcatWs',
+                    'replace'       => 'Odinsey\ORM\Query\AST\Functions\String\Replace',
+                    'date_format'   => 'Odinsey\ORM\Query\AST\Functions\String\DateFormat'
                 ]
             ]
         ]
@@ -255,26 +255,26 @@ Extendability and Database Support
 
 ### Architecture
 
-Most of functions, that require only one ArithmeticPrimary argument may be parsed with `Oro\ORM\Query\AST\Functions\SimpleFunction`.
+Most of functions, that require only one ArithmeticPrimary argument may be parsed with `Odinsey\ORM\Query\AST\Functions\SimpleFunction`.
 This class is responsible for parsing function definition and saving parsed data to parameters. It is extended from
-`Oro\ORM\Query\AST\Functions\AbstractPlatformAwareFunctionNode`. This layer work with DQL function parsing.
+`Odinsey\ORM\Query\AST\Functions\AbstractPlatformAwareFunctionNode`. This layer work with DQL function parsing.
 SQL generation is responsibility of platform specific functions, that extends `PlatformFunctionNode`.
 `AbstractPlatformAwareFunctionNode` creates appropriate instance of platform function based on current connection Database Platform instance name and DQL function name.
 
 Platform function classes naming rule is:
 
 ```
-Oro\ORM\Query\AST\Platform\Functions\$platformName\$functionName
+Odinsey\ORM\Query\AST\Platform\Functions\$platformName\$functionName
 ```
 
 ### Adding new platform
-To add support of new platform you just need to create new folder `Oro\ORM\Query\AST\Platform\Functions\$platformName`
+To add support of new platform you just need to create new folder `Odinsey\ORM\Query\AST\Platform\Functions\$platformName`
 and implement required function there according to naming rules
 
 ### Adding new function
 
 In case when your function is function with only one ArithmeticPrimary argument you may not create DQL function parser
-and use `Oro\ORM\Query\AST\Functions\SimpleFunction` for this.
+and use `Odinsey\ORM\Query\AST\Functions\SimpleFunction` for this.
 Then only platform specific SQL implementation of your function is required.
 
 In case when your are implementing more complex function, like GROUP_CONCAT both DQL parser and SQL implementations are required.

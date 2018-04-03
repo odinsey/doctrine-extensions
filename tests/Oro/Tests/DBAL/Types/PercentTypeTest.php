@@ -1,11 +1,11 @@
 <?php
 
-namespace Oro\Tests\DBAL\Types;
+namespace Odinsey\Tests\DBAL\Types;
 
 use Doctrine\DBAL\Types\Type;
 
-use Oro\DBAL\Types\PercentType;
-use Oro\Tests\Connection\TestUtil;
+use Odinsey\DBAL\Types\PercentType;
+use Odinsey\Tests\Connection\TestUtil;
 
 class PercentTypeTest extends \PHPUnit_Framework_TestCase
 {
@@ -17,7 +17,7 @@ class PercentTypeTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         if (!Type::hasType(PercentType::TYPE)) {
-            Type::addType(PercentType::TYPE, 'Oro\DBAL\Types\PercentType');
+            Type::addType(PercentType::TYPE, 'Odinsey\DBAL\Types\PercentType');
         }
         $this->percentType = Type::getType(PercentType::TYPE);
     }

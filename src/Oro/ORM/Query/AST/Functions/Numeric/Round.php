@@ -6,11 +6,11 @@
  * Time: 10.47.PD
  */
 
-namespace Oro\ORM\Query\AST\Functions\Numeric;
+namespace Odinsey\ORM\Query\AST\Functions\Numeric;
 
 use Doctrine\ORM\Query\Parser;
 use Doctrine\ORM\Query\Lexer;
-use Oro\ORM\Query\AST\Functions\AbstractPlatformAwareFunctionNode;
+use Odinsey\ORM\Query\AST\Functions\AbstractPlatformAwareFunctionNode;
 
 class Round extends AbstractPlatformAwareFunctionNode
 {

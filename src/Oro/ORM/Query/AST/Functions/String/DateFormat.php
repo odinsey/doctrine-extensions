@@ -1,10 +1,10 @@
 <?php
 
-namespace Oro\ORM\Query\AST\Functions\String;
+namespace Odinsey\ORM\Query\AST\Functions\String;
 
 use Doctrine\ORM\Query\Lexer;
 use Doctrine\ORM\Query\Parser;
-use Oro\ORM\Query\AST\Functions\AbstractPlatformAwareFunctionNode;
+use Odinsey\ORM\Query\AST\Functions\AbstractPlatformAwareFunctionNode;
 
 class DateFormat extends AbstractPlatformAwareFunctionNode
 {
